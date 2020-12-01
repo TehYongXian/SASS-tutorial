@@ -1,0 +1,72 @@
+@import 'config';
+@import 'home';
+@import 'menu';
+@import 'about';
+@import 'projects';
+@import 'contact';
+@import 'responsive';
+
+
+body {
+    background: $primary-color;
+    color: set-text-color($primary-color);
+    height: 100vh;
+    //vh = similar to percentage
+    //vh = View high
+    //100vh = 100% of view high
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1;
+}
+
+h1, h2, h3 {
+    font-weight: 400;
+}
+
+a {
+    color: set-text-color($primary-color);
+    text-decoration: none;
+}
+
+.text-secondary {
+    color: $secondary-color;
+}
+
+header {
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+    padding: 1rem;
+    //rem is base on the font side of the body, default font size
+    //of the body is 16px, 1rem mean 16 * 1 , 2rem = 16 * 2 = 32
+    //rem and em is similar just, rem is base on the font body, but em is base on the parents.
+}
+
+main {
+    height: 100%;
+    width: 100%;
+
+    .social-icons {
+        position: fixed;
+        bottom: 1rem;
+        left: 1rem;
+        
+        a {
+        padding: 0.4rem;
+        @include transition-ease;
+
+        &:hover {
+            color: $secondary-color;
+            }
+        }
+    }
+}
+
+footer {
+    font-size: 1rem;
+    position: fixed;
+    bottom: 0.4rem;
+    right: 1rem;
+    text-align: right;
+    padding: 1rem;
+    color: set-text-color($primary-color);
+}
